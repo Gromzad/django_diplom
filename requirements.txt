@@ -1,5 +1,8 @@
 dj-database-url==0.5.0
+<<<<<<< HEAD
 django-mysql==3.3.0
+=======
+>>>>>>> bdab10f... added mysqlclient requirement
 mysqlclient==1.4.6
 Django==3.0.3
 django-filter==2.2.0
