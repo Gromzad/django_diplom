@@ -1,0 +1,22 @@
+{% extends 'instrproduction.html' %}
+{% block title %} {{item.title}} {% endblock title %}
+{% block content %}
+    <style>
+        .breadcrumb{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.15rem 1rem;margin-bottom:1rem;list-style:none;background-color:#e9ecef;border-radius:.25rem}
+        .breadcrumb p::before{
+          content: "➤";
+        }
+
+    </style>
+    {% block breadcrumbs %}
+        <div class="breadcrumb">
+            <a href="/">Категорії</a>
+            <p></p>
+            <a href="/instrproduction">Вироби інструментального виробництва</a>
+            <p>{{item.title}}</p>
+        </div>
+    {% endblock breadcrumbs %}
+    <h2 style="margin-left:10px;">{{item.title}}</h2>
+    <img src="{{ item.img.url }}" width="400" height="225"/>
+    <p style="border: 1.5px solid gray;padding: 5px; ">{{item.text }}</p>
+{% endblock content %}

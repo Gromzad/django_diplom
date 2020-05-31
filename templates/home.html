@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .pic p{text-align: center;}
+    .pic{ max-width: 300px;float:left;margin-right: 10px;}
+    .breadcrumb{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.15rem 1rem;margin-bottom:1rem;list-style:none;background-color:#e9ecef;border-radius:.25rem}
+    .breadcrumb::after{
+      content: "➤";
+    }
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid grey;
+    }
+    form.example button {
+      padding: 10px;
+      background: #61605f;
+      color: white;
+      font-size: 15px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+</style>
+<p><center><h1>Довідник інструментального виробництва</h1></center></p>
+<center>
+    <form class="example" action="/s/">
+        <input type="text" placeholder="Шукати.." name="q" role="search">
+        <button type="submit">Пошук</button>
+    </form>
+</center>
+{% block breadcrumbs %}
+    <div class="breadcrumb"><a href=" ">Категорії</a></div>
+{% endblock breadcrumbs %}
+<a href="metalproduction/"><div class="pic"><img src="{{ data1.img.url }}" width="300" height="200"/><p>{{ data1.title }}</p></div></a>
+<a href="machinebuild/"><div class="pic"><img src="{{ data2.img.url }}" width="300" height="200"/><p>{{ data2.title }}</p></div></a>
+<a href="instrproduction/"><div class="pic"><img src="{{ data3.img.url }}" width="300" height="200"/><p>{{ data3.title }}</p></div></a>
+<a href="carbuild/"><div class="pic"><img src="{{ data4.img.url }}" width="300" height="200"/><p>{{ data4.title }}</p></div></a>
+<a href="traktorbuild/"><div class="pic"><img src="{{ data5.img.url }}" width="300" height="200"/><p>{{ data5.title }}</p></div></a>
+<a href="chembuild/"><div class="pic"><img src="{{ data6.img.url }}" width="300" height="200"/><p>{{ data6.title }}</p></div></a>
+
+{% endblock content %}
