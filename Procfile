@@ -1,1 +1,1 @@
-web: gunicorn toolproduction.wsgi --log-file -
+web: gunicorn directory.wsgi --log-file -
