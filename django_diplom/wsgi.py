@@ -1,5 +1,5 @@
 """
-WSGI config for ToolProduction project.
+WSGI config for django_diplom project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,6 +10,6 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ToolProduction.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_diplom.settings')
 
 application = get_wsgi_application()
