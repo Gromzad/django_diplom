@@ -1,1 +1,1 @@
-web: gunicorn django_diplom.wsgi --log-file -
+web: gunicorn django_diplom.wsgi
