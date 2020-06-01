@@ -30,6 +30,22 @@ ALLOWED_HOSTS = ['shrouded-forest-45040.herokuapp.com','127.0.0.1']
 
 # Application definition
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
+
 INSTALLED_APPS = [
     'directory',
     'django.contrib.admin',
