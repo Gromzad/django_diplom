@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.core.paginator import *
+from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from .models import Item
 from django.shortcuts import redirect
@@ -25,7 +26,7 @@ def directory(request):
             "data6": obj6,
         }
         return render(request, 'home.html', context)
-    except DoesNotExist:
+    except ObjectDoesNotExist:
         raise Http404
 
 def search(request):
