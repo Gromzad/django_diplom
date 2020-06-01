@@ -25,7 +25,7 @@ def directory(request):
             "data6": obj6,
         }
         return render(request, 'home.html', context)
-    except ObjectDoesNotExist:
+    except DoesNotExist:
         raise Http404
 
 def search(request):
