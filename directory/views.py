@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.http import Http404
 from django.core.paginator import *
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
@@ -26,8 +27,8 @@ def directory(request):
             "data6": obj6,
         }
         return render(request, 'home.html', context)
-    except ObjectDoesNotExist:
-        raise Http404
+    except Category.DoesNotExist:
+        raise Http404("Page does not exist")
 
 def search(request):
     try:
