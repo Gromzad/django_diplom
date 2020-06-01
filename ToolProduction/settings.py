@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['shrouded-forest-45040.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    #'django-diplom',
     'directory',
     'django.contrib.admin',
     'django.contrib.auth',
