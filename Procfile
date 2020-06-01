@@ -1,1 +1,1 @@
-web: gunicorn django_diplom.wsgi:application --preload
+web: gunicorn django_diplom.wsgi
