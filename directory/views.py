@@ -9,22 +9,24 @@ from django.shortcuts import redirect
 
 
 def directory(request):
-
-    obj1 = Category.objects.get(id=1)
-    obj2 = Category.objects.get(id=2)
-    obj3 = Category.objects.get(id=3)
-    obj4 = Category.objects.get(id=4)
-    obj5 = Category.objects.get(id=5)
-    obj6 = Category.objects.get(id=6)
-    context = {
-        "data1": obj1,
-        "data2": obj2,
-        "data3": obj3,
-        "data4": obj4,
-        "data5": obj5,
-        "data6": obj6,
-    }
-    return render(request, 'home.html', context)
+    if Category.objects.get(id=1):
+        obj1 = Category.objects.get(id=1)
+        obj2 = Category.objects.get(id=2)
+        obj3 = Category.objects.get(id=3)
+        obj4 = Category.objects.get(id=4)
+        obj5 = Category.objects.get(id=5)
+        obj6 = Category.objects.get(id=6)
+        context = {
+            "data1": obj1,
+            "data2": obj2,
+            "data3": obj3,
+            "data4": obj4,
+            "data5": obj5,
+            "data6": obj6,
+        }
+        return render(request, 'home.html', context)
+    else:
+        return render(request, 'home.html')
 
 def search(request):
     try:
