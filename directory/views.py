@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 
 
 def directory(request):
-    if Category.objects.get(id=1):
+    try:
         obj1 = Category.objects.get(id=1)
         obj2 = Category.objects.get(id=2)
         obj3 = Category.objects.get(id=3)
@@ -25,8 +25,8 @@ def directory(request):
             "data6": obj6,
         }
         return render(request, 'home.html', context)
-    else:
-        return render(request, 'home.html')
+    except ObjectDoesNotExist:
+        raise Http404
 
 def search(request):
     try:
