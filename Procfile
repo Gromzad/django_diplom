@@ -1,1 +1,1 @@
-web: gunicorn ToolProduction.wsgi:application --log-file - --log-level debug
+web: gunicorn ToolProduction.wsgi:application --preload
