@@ -1,1 +1,1 @@
-web: gunicorn django_diplom.wsgi
+web: gunicorn ToolProduction.wsgi
