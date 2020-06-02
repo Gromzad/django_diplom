@@ -26,7 +26,9 @@ SECRET_KEY = '$kitrg0r8^95slsmi^0fon#x+0ws3*%p%yuy5=!%in9zn^pb&g'
 DEBUG = False
 
 ALLOWED_HOSTS = ['shrouded-forest-45040.herokuapp.com','127.0.0.1', '*']  
-
+ADMINS = [
+    ('Kek', 'danilrybalk@gmail.com'),
+]
 
 # Application definition
 
