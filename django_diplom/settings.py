@@ -27,8 +27,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['shrouded-forest-45040.herokuapp.com','127.0.0.1', '*']  
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'somemail@gmail.com'
-SERVER_EMAIL = 'somemail@gmail.com'
+DEFAULT_FROM_EMAIL = 'testdjango1488@gmail.com'  
+SERVER_EMAIL = 'testdjango1488@gmail.com'  
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'testdjango1488@gmail.com'             
 EMAIL_HOST_PASSWORD = '963852zxc'
