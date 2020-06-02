@@ -26,49 +26,36 @@ SECRET_KEY = '$kitrg0r8^95slsmi^0fon#x+0ws3*%p%yuy5=!%in9zn^pb&g'
 DEBUG = False
 
 ALLOWED_HOSTS = ['shrouded-forest-45040.herokuapp.com','127.0.0.1', '*']  
-ADMINS = (
-    ('Kek', 'danilrybalk@gmail.com'),
-)
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'somemail@gmail.com'
+SERVER_EMAIL = 'somemail@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testdjango1488@gmail.com'             
+EMAIL_HOST_PASSWORD = '963852zxc'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+ADMINS = (('kek', 'danilrybalk@gmail.com'),)
 
 # Application definition
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': ('%(asctime)s [%(process)d] [%(levelname)s] '
-                       'pathname=%(pathname)s lineno=%(lineno)s '
-                       'funcname=%(funcName)s %(message)s'),
-            'datefmt': '%Y-%m-%d %H:%M:%S'
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        }
-    },
     'handlers': {
-        'null': {
-            'level': 'DEBUG',
-            'class': 'logging.NullHandler',
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
         },
-        'console': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose'
-        }
     },
     'loggers': {
         'django': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
+            'handlers': ['file'],
+            'level': 'WARNING',
             'propagate': True,
         },
-        'django.request': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-            'propagate': False,
-        },
-    }
+    },
 }
 
 INSTALLED_APPS = [
