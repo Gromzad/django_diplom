@@ -23,7 +23,7 @@ pytz==2019.3
 sentry-sdk==0.14.4
 six==1.14.0
 sqlparse==0.3.0
-urllib3==1.25.9
+urllib3==1.26.5
 virtualenv==20.0.21
 virtualenvwrapper-win==1.2.6
 whitenoise==5.1.0
